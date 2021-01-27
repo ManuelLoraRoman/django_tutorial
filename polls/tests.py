@@ -54,7 +54,7 @@ class QuestionDetailViewTests(TestCase):
 
         En este test se comprueba que si accedemos a detalle de una pregunta 
         con fecha de publicación en el futuro (todavía no se ha publicado),
-        nos devuelve un 404. 
+        nos devuelve un 404.
         """
         future_question = create_question(
             question_text='Future question.', days=5)
