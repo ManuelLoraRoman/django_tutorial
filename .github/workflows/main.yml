@@ -24,10 +24,10 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - name: pip update
+    - name: Instalar requerimientos
       run: |
         pip install --upgrade pip
         pip install -r requirements.txt
       
-    - name: test
+    - name: Probar python3
       run: python3 manage.py test
