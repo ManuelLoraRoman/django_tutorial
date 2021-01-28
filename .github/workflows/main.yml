@@ -31,3 +31,9 @@ jobs:
       
     - name: Probar python3
       run: python3 manage.py test
+    - uses: akhileshns/heroku-deploy@v3.8.9 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: djangotutorialora #Must be unique in Heroku
+          heroku_email: manuelloraroman@gmail.com
+          procfile: "web: npm start"
